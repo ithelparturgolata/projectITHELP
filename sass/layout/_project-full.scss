@@ -1,0 +1,132 @@
+.project {
+    &-single {
+        max-width: 85%;
+        margin: 3rem auto;
+        padding: 3.5%;
+        background: $color-black-light;
+        position: relative;
+
+        @media (max-width: 575px) {
+            max-width: 100%;
+        }
+
+        .mfp-close {
+            color: $color-white;
+        }
+
+        .owl-nav,
+        .owl-dots {
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .owl-dots {
+            float: right;
+        }
+    }
+
+    &-bg {
+        background: url(../img/portfolio/port-full.jpg) no-repeat center;
+        background-size: cover;
+        height: 80vh;
+    }
+
+    &-share {
+        margin-top: 1rem;
+
+        span {
+            padding-right: 2rem;
+            margin-right: 2rem;
+            border-right: 1px solid #aaa;
+
+            @media (max-width: 575px) {
+                display: none;
+            }
+        }
+
+        li {
+            display: inline-block;
+        }
+    }
+
+    &-container {
+        padding: 0;
+    }
+
+    &-intro {
+        margin: 2rem 0 2rem;
+    }
+
+    &-heading {
+        margin-bottom: .2rem;
+    }
+
+    &-cat {
+        position: relative;
+        padding-left: 4%;
+        font-size: .7rem;
+
+        &::before {
+            width: 3%;
+        }
+    }
+
+    &-details {
+        img {
+            margin-top: 3rem;
+        }
+    }
+
+    &-additional {
+        margin: 3rem 0 1rem;
+    }
+
+    &-info {
+        width: 95%;
+        margin-left: auto;
+        padding: 2rem;
+        box-shadow: $box-shadow-all;
+        
+        @media (max-width: 992px) {
+            display: table;
+            width: auto;
+            margin: 3rem auto 2rem;
+        }
+        
+        &-list {
+            li {
+                font-size: .9rem;
+                padding: 1rem 0;
+                position: relative;
+
+                &::before {
+                    @include border-bottom;
+                }
+                span {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+
+    &-sub-heading {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    &-nav {
+        margin: 1rem 0;
+
+        a:first-child {
+            margin-right: 2.5rem !important;
+        }
+
+        [class~="fa-angle-left"] {
+            margin-right: .3rem;
+        }
+
+        [class~="fa-angle-right"] {
+            margin-left: .3rem;
+        }
+    }    
+}

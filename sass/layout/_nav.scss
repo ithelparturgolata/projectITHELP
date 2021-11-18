@@ -1,0 +1,11 @@
+.nav {
+    &-list {
+        width: 100%;
+    }
+
+    &-link {
+        color: $color-white;
+        transition: all .3s ease;
+        position: relative;
+    }
+}

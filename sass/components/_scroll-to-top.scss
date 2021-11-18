@@ -1,0 +1,17 @@
+.scrollTop {
+  font-size: 1.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  left: calc(100% - 4rem);
+  color: $color-white;
+  background: $color-black-light;
+  box-shadow: $box-shadow-all;
+
+  &:hover {
+    color: $color-white;
+  }
+}

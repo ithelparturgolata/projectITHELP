@@ -1,0 +1,35 @@
+.scroll-down-ind {
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    left: 50%;
+    bottom: 8%;
+    transform: translate(-50%, -50%) rotate(45deg);
+
+    span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-bottom: 2px solid $color-white;
+        border-right: 2px solid $color-white;
+        animation: animate-ind 1.3s linear infinite;
+
+        &:nth-child(1) {
+            transform: translate(-1rem, -1rem);
+            animation-delay: -0.4s;
+        }
+        
+        &:nth-child(2) {
+            transform: translate(0, 0);
+            animation-delay: -0.2s;
+        }
+        
+        &:nth-child(3) {
+            transform: translate(1rem, 1rem);
+            animation-delay: 0s;
+        }
+    }
+}

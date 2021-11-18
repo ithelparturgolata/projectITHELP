@@ -1,0 +1,116 @@
+.client {
+    position: relative;
+    
+    &-single {
+        background: $color-black;
+        padding: 2rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .5s ease-in-out;
+        opacity: 0;
+
+        &.active {
+            position: relative;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        @media (max-width: 767px) {
+            position: relative;
+            opacity: 1;
+
+            &:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            flex-direction: column;
+        }
+
+        @media (max-width: 420px) {
+            padding-top: 6.5rem;
+        }
+
+        @media (max-width: 280px) {
+            padding: 6.5rem 1rem 2rem;
+        }
+    }
+
+    &-media {
+        max-width: 12rem;
+        max-height: 12rem;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    
+    &-quote {
+        width: 4rem;
+        position: absolute;
+        right: 1.5rem;
+        top: 1rem;
+    }
+
+    &-details {
+        overflow: hidden;
+        width: calc(100% - 12rem);
+        padding-left: 2rem;
+        padding-top: 2rem;
+
+        @media (max-width: 576px) {
+            width: 100%;
+            padding-left: 0;
+        }
+    }
+
+    &-rating {
+        margin-bottom: 1rem;
+
+        ion-icon {
+            font-size: 1.25rem;
+        }
+    }
+
+    &-intro {
+        float: right;
+        transform: translateX(100%);
+        transition: all .5s ease-in-out;
+
+        @media (max-width: 767px) {
+            transform: translateX(0);
+        }
+
+        @media (max-width: 420px) {
+            margin-top: .5rem;
+        }
+    }
+
+    &-single.active &-intro {
+        transform: translateX(0);
+    }
+
+    &-navigator {
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    &-navigate {
+        font-size: 2.5rem;
+        width: 5rem;
+        height: 5rem;
+        line-height: 5rem;
+        text-align: center;
+        border-radius: 50%;
+        box-shadow: $shadow-1;
+        margin: 0 0 1rem auto;
+        cursor: pointer;
+        transform: scale(.85);
+        transition: $trans-3;
+
+        &.active {
+            transform: scale(1.15);
+        }
+    }
+}

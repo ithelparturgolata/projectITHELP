@@ -1,0 +1,87 @@
+/*
+  * Template Name: Sumit - Responsive Personal Portfolio Template
+  * Author: SHLThemes
+  * Author/Developer URL: https://themeforest.net/user/shlthemes
+  * Version: 1.0.0
+  * License: Themeforest Standard Licenses: https://themeforest.net/licenses
+  * File Description: CSS Primary Color file of the template
+*/
+/* Color: #2643fa */
+.about-info-item a,
+.about-title span,
+.blog-more,
+.blog-single-quote,
+.btn-animated:hover,
+.btn-rounded,
+.client-rating i,
+.comment-reply,
+.contact-item i,
+.owl-next i:hover,
+.owl-prev i:hover,
+.portfolio-filter li.active,
+.portfolio-filter li:hover,
+.switcher__setting i,
+a.active,
+a:hover {
+  color: #2643fa
+}
+
+.about-vdo-play:hover,
+.btn-rounded:hover,
+.cd-words-wrapper::after,
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span,
+.service-box::before,
+::-webkit-scrollbar-thumb,
+.scrollTop:hover {
+  background: #2643fa
+}
+
+.scrolling-indicator {
+  background: linear-gradient(to right, #384956, #2643fa)
+}
+
+.about-quote,
+.blog-single-header span:not(:last-child)::before,
+.btn-rounded,
+.social-icons a:hover {
+  border: 1px solid #2643fa
+}
+
+.resume-item {
+  border-left: 2px solid #2643fa
+}
+
+.contact-field:focus {
+  border-bottom: 2px solid #2643fa
+}
+
+.btn-animated::before,
+.portfolio-filter li.active::before {
+  border-top: 2px solid #2643fa;
+  border-left: 2px solid #2643fa
+}
+
+.btn-animated::after,
+.portfolio-filter li.active::after {
+  border-bottom: 2px solid #2643fa;
+  border-right: 2px solid #2643fa
+}
+
+.about-quote::before {
+  border-top: 1rem solid #2643fa;
+  border-right: 1rem solid transparent
+}
+
+.blog-sidebar-heading::after,
+.switcher__title::after {
+  border-top: .5rem solid #2643fa
+}
+
+.resume-item::before {
+  border-left: .6rem solid #2643fa
+}
+
+.client-quote {
+  fill: #2643fa
+}

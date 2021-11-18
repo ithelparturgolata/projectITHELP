@@ -1,0 +1,99 @@
+.about {
+    &-details {
+        padding-right: .5rem;
+
+        @media (max-width: 991px) {
+            padding-right: 0;
+        }
+
+        &.modern {
+            @media (max-width: 1199px) {
+                padding-right: 0;
+            }
+        }
+    }
+
+    &-quote {
+        padding: .2rem .5rem;
+        position: relative;
+
+        &::before {
+            @include absContent;
+            border-right: 1rem solid transparent;
+            bottom: -1rem;
+        }
+    }
+
+    &-title {
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin: 1rem 0;
+    }
+
+    &-info {
+        padding: 2rem;
+        margin: 0;
+        box-shadow: 0 0 1rem $color-black inset;
+
+        @media (max-width: 300px) {
+            padding: 2rem 0 0;
+            margin-top: 2rem;
+            box-shadow: none;
+            border-top: 2px solid $color-text;
+        }
+    }
+
+    &-btns {
+        .btn {
+            margin: .5rem;
+        }
+    }
+
+    &-vdo {
+        background: url(../img/working-env.jpg) no-repeat center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        &-play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: $color-white;
+            color: $color-black-light;
+            font-size: 1rem;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            line-height: 3rem;
+            text-align: center;
+            transition: $trans-3;
+
+            &:hover {
+                color: $color-white;
+            }
+        }
+
+        &-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        @media (max-width: 991px) {
+            height: 28rem;
+            margin-top: 3rem;
+        }
+
+        &.modern {
+            @media (max-width: 1199px) {
+                height: 28rem;
+                margin-top: 3rem;
+            }
+        }
+    }
+}

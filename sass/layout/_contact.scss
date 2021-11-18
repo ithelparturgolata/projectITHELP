@@ -1,0 +1,138 @@
+.contact {
+    &-section {
+        position: relative;
+
+        &.modern {
+            @media (max-width: 1199px) {
+                .ord-xl-0 {
+                    order: 0;
+                    margin-bottom: 3rem;
+                }
+    
+                .ord-xl-1 {
+                    order: 1;
+                }
+            }
+        }
+
+        &:not(.modern) {
+            @media (max-width: 991px) {
+                .ord-xl-0 {
+                    order: 0;
+                    margin-bottom: 3rem;
+                }
+    
+                .ord-xl-1 {
+                    order: 1;
+                }
+            }
+        }
+    }
+
+    &-form {
+        max-width: 90%;
+
+        @media (max-width: 991px) {
+            max-width: 100%;
+        }
+
+        #formStatus {
+            margin-left: 2rem;
+        }
+    }
+
+    &-socials {
+        position: absolute;
+        right: 1%;
+        bottom: 10rem;
+        box-shadow: -7px -7px 16px $color-black;
+        padding: 0 .2rem;
+
+        a {
+            margin: .3rem 0;
+        }
+
+        &-title {
+            font-size: 1.25rem;
+            display: none;
+        }
+
+        @media (max-width: 991px) {
+            position: relative;
+            right: auto;
+            bottom: auto;
+            padding: 0;
+            padding-top: 2rem;
+            box-shadow: none;
+            text-align: center;
+
+            &-title {
+                display: block;
+            }
+            
+            li {
+                display: inline-block;
+            }
+        }
+    }
+
+    &-title {
+        margin-bottom: 1.25rem;
+    }
+
+    &-item {
+        padding: .75rem 0;
+        position: relative;
+
+        &:not(:last-child) {
+
+            &::before {
+                @include absContent;
+
+                width: 100%;
+                height: 1px;
+                bottom: 0;
+                left: 0;
+                background: radial-gradient(ellipse at center,
+                        #777 0%, transparent 70%)
+            }
+        }
+
+        i {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 260px) {
+            display: block !important;
+        }
+    }
+
+    &-details {
+        margin-left: 2rem;
+
+        span {
+            display: block;
+            font-size: .875rem;
+
+            &:first-child {
+                font-weight: 600;
+            }
+        }
+    }
+
+    &-field {
+        border: 0;
+        border-bottom: 2px solid transparent;
+        font-size: .9rem;
+        color: inherit;
+        background: #101419;
+        box-shadow: $shadow-2;
+        padding: .5rem .8rem;
+        margin-bottom: 1.5rem;
+        width: 100%;
+    }
+
+    &-btn {
+        background: transparent;
+    }
+}

@@ -1,0 +1,88 @@
+.service {
+    &-box {
+        padding: 4rem 1.5rem 0;
+        width: 95%;
+        background: $color-black-light;
+        position: relative;
+        transition: $trans-3;
+
+        &::before,
+        &::after {
+            @include absContent;
+        }
+
+        &::before {
+            top: -.125rem;
+            right: -.125rem;
+            bottom: -.125rem;
+            left: -.125rem;
+            z-index: -1;
+            transform: skew(2deg, 2deg);
+        }
+
+        &::after {
+            background: rgba($color-white, .03);
+            width: 50%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        &:hover {
+            padding: 8rem 1.5rem 3rem;
+        }
+
+        @media (max-width: 1199px) {
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 991px) {
+            padding: 8rem 1.5rem 3rem;
+        }
+    }
+
+    &-num {
+        font-size: 10rem;
+        color: rgba($color-white, .1);
+        position: absolute;
+        top: 17%;
+        right: 50%;
+        transform: translateX(50%);
+        transition: $trans-3;
+    }
+
+    &-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    &-details {
+        margin-bottom: 1.6rem;
+    }
+
+    &-btn {
+        transform: translateY(-3rem);
+        opacity: 0;
+        visibility: hidden;
+        position: relative;
+        z-index: 11;
+        transition: $trans-3;
+
+        @media (max-width: 991px) {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &-box:hover &-btn {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    &-box:hover &-num {
+        top: 0;
+    }
+}

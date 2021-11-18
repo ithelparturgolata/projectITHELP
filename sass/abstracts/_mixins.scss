@@ -1,0 +1,73 @@
+@mixin animate-border($width, $height) {
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: '';
+        width: $width;
+        height: $height;
+        transition: $trans-3;
+    }
+
+    &::before {
+        top: 0;
+        left: 0;
+    }
+
+    &::after {
+        bottom: 0;
+        right: 0;
+    }
+
+}
+
+@mixin absContent {
+    position: absolute;
+    content: '';
+}
+
+@mixin line-behind {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: .1rem;
+    background: $color-text;
+}
+
+@mixin border-bottom {
+    @include absContent;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(ellipse at left,
+            #777 0%, transparent 70%)
+}
+
+@mixin overBgImg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: $color-white;
+    background: rgba($color-black-light, .5);
+    padding: 0 1rem;
+}
+
+@mixin btmind {
+    margin-bottom: 2rem;
+    position: relative;
+
+    &::before {
+        @include border-bottom;
+        bottom: -.3rem;
+    }
+
+    &::after {
+        @include absContent;
+        border-right: .5rem solid transparent;
+        border-left: .5rem solid transparent;
+        bottom: -.8rem;
+        right: 50%;
+        transform: translateX(50%);
+    }
+}

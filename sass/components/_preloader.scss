@@ -1,0 +1,40 @@
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: $color-black-light;
+  z-index: 9999;
+
+  &-loading {
+    width: 15.625rem;
+    height: 3.125rem;
+    line-height: 3.125rem;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $color-white;
+    letter-spacing: .2rem;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: .9375rem;
+      height: .9375rem;
+      background: $color-white;
+      position: absolute;
+      animation: load 0.7s infinite alternate ease-in-out;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+  }
+
+}

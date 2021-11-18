@@ -1,0 +1,88 @@
+.portfolio {
+    &-filter {
+        text-align: center;
+        margin-bottom: 1.5rem;
+
+        li {
+            display: inline-block;
+            margin: 0 .8rem;
+            padding: .3rem .7rem;
+            color: rgba($color-white, .7);
+            cursor: pointer;
+            position: relative;
+            transition: $trans-3;
+
+            &.active {
+                @include animate-border(.7rem, .7rem);
+            }
+        }
+    }
+
+    &-item {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 2rem;
+
+    }
+
+    &-img {
+        max-width: 70%;
+
+        @media (max-width: 576px) {
+            max-width: 100%;
+        }
+    }
+
+    &-details {
+        width: 51%;
+        position: absolute;
+        top: 0;
+        right: 9%;
+        height: 100%;
+        background: rgba($color-black, .6);
+        padding: 0 1.5rem;
+
+        @media (max-width: 1200px) {
+            right: 0;
+        }
+
+        @media (max-width: 576px) {
+            position: relative;
+            width: 100%;
+            padding: 1rem 1.5rem;
+            align-items: flex-start;
+        }
+    }
+
+    &-heading {
+        font-size: 1rem;
+    }
+
+    &-cat {
+        font-size: .8rem;
+        margin: 1rem 0;
+    }
+
+    &-btn {
+        position: absolute;
+        bottom: -1rem;
+        left: -4.5rem;
+        opacity: 0;
+
+        @media (max-width: 991px) {
+            bottom: 1rem;
+            opacity: 1;
+        }
+
+        @media (max-width: 576px) {
+            position: relative;
+            left: 0;
+            margin-top: 1rem;
+        }
+    }
+
+    &-item:hover &-btn {
+        opacity: 1;
+        bottom: 1rem;
+    }
+}

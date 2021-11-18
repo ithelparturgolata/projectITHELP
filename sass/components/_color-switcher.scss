@@ -1,0 +1,98 @@
+.switcher {
+    width: 12rem;
+    position: fixed;
+    right: -12rem;
+    top: 20vh;
+    text-align: center;
+    background: $color-black-light;
+    padding: 1.5rem 1rem;
+    z-index: 999;
+    transition: $trans-3;
+    
+    &.active {
+        right: 0;
+        box-shadow: $box-shadow-all;
+    }
+
+    &-title {
+        font-size: 1.1rem;
+
+        @include btmind;
+    }
+
+    &-list {
+        width: 90%;
+        margin: 1rem auto 0;
+
+        li {
+            display: inline-block;
+            width: 1.8rem;
+            height: 1.8rem;
+            border-radius: 50%;
+            margin: .1rem;
+            position: relative;
+            transition: $trans-3;
+            cursor: pointer;
+
+            &:nth-child(1) {
+                background: #00BFFF; //Deep Sky Blue
+            }
+
+            &:nth-child(2) {
+                background: #2d84fb; //Light Blue
+            }
+
+            &:nth-child(3) {
+                background: #26dca6; //Green Light
+            }
+
+            &:nth-child(4) {
+                background: #ffb900; //Orange Light
+            }
+
+            &:nth-child(5) {
+                background: #daa520; //Goldenrod
+            }
+
+            &:nth-child(6) {
+                background: #55c57a; //Green
+            }
+
+            &:nth-child(7) {
+                background: #ff355e; //Radical Red
+            }
+
+            &:nth-child(8) {
+                background: #ff645e; //Pink
+            }
+
+            &:nth-child(9) {
+                background: #fc00ff; //Purple
+            }
+
+            &:nth-child(10) {
+                background: #2643fa; //Dark Blue.
+            }
+
+            &.active {
+                transform: scale(.7);
+                box-shadow: $box-shadow-all;
+            }
+        }
+    }
+
+    &-setting {
+        font-size: 1.25rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        text-align: center;
+        background: $color-black-light;
+        position: absolute;
+        left: -2.5rem;
+        top: 0;
+        border-top-left-radius: 10rem;
+        border-bottom-left-radius: 10rem;
+        box-shadow: $box-shadow-all;
+    }
+}

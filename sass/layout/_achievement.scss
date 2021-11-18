@@ -1,0 +1,26 @@
+.achievement {
+    padding-top: 5.5rem;
+
+    &-box {
+        text-align: center;
+        @media (max-width: 768px) {
+            margin: 2.5rem .5rem 0;
+            padding: 1rem;
+            box-shadow: $box-shadow-all;
+        }
+    }
+
+    &-over {
+        vertical-align: top;
+        font-size: .9rem;
+    }
+
+    &-counter {
+        font-size: 4rem;
+        line-height: 1.4;
+    }
+
+    &-title {
+        margin-bottom: 0;
+    }
+}

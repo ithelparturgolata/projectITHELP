@@ -1,0 +1,37 @@
+.cd {
+    &-words {
+        &-wrapper {
+            display: inline-block;
+            position: relative;
+            text-align: left;
+            overflow: hidden;
+            vertical-align: top;
+
+            &::after {
+                /* line */
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 2px;
+                height: 100%;
+            }
+
+            b {
+                display: inline-block;
+                position: absolute;
+                white-space: nowrap;
+                left: 0;
+                top: 0;
+                font-style: normal;
+                font-weight: 400;
+                opacity: 0;
+
+                &.is-visible {
+                    position: relative;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

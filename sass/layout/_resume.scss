@@ -1,0 +1,56 @@
+.resume {
+    &-block {
+        padding-left: 4rem;
+
+        @media (max-width: 300px) {
+            padding-left: 0;
+        }
+
+        &-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+
+            @media (max-width: 767px) {
+                &.experience {
+                    margin-top: 4rem;
+                }
+            }
+        }
+    }
+
+    &-item {
+        box-shadow: $box-shadow-all;
+        padding: 2rem;
+        position: relative;
+
+        &:not(:first-child) {
+            margin-top: 3rem;
+        }
+
+        &::before {
+            @include absContent;
+            border-top: .6rem solid transparent;
+            border-bottom: .6rem solid transparent;
+            left: 0;
+            top: 2.6rem;
+
+            @media (max-width: 300px) {
+                top: 2.1rem;
+            }
+        }
+    }
+
+    &-period {
+        position: absolute;
+        left: -4rem;
+        top: 2.4rem;
+        width: 3rem;
+
+        @media (max-width: 300px) {
+            position: relative;
+            left: auto;
+            top: auto;
+            width: auto;
+        }
+    }
+}

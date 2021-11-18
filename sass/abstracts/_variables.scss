@@ -1,0 +1,17 @@
+// Colors
+$color-text: rgba(255, 255, 255, .7);
+$color-white: #fff;
+$color-light-white: #fcfcfc;
+$color-primary:#26dca6;
+$color-black: #101419;
+$color-black-light: #1a2228;
+
+$sidebar-width: 17.5rem;
+
+$trans-3: all .3s ease-in-out;
+
+// Shadows
+$shadow-1: 0.3rem 0.3rem 0.6rem $color-black;
+$shadow-2: .25rem .25rem .75rem $color-black;
+$box-shadow-all: .25rem .25rem .7rem $color-black,
+                -.25rem -.25rem .7rem $color-black;

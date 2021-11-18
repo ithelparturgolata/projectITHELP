@@ -1,0 +1,46 @@
+.btn {
+    font-size: .9375rem;
+    display: inline-block;
+    padding: .8rem 2rem;
+    border-radius: 0;
+    position: relative;
+    transition: $trans-3;
+    
+    &-rounded {
+        border-radius: 3rem;
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+
+    &-animated {
+        color: $color-white;
+        position: relative;
+        transition: $trans-3;
+
+        &::before,
+        &::after {
+            @include absContent;
+            width: 15%;
+            height: 35%;
+            transition: $trans-3;
+        }
+        
+        &::before {
+            top: 0;
+            left: 0;
+        }
+
+        &::after {
+            bottom: 0;
+            right: 0;
+        }
+
+        &:hover::before,
+        &:hover::after {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
